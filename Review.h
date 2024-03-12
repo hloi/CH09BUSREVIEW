@@ -31,8 +31,8 @@ public:
 
 private:
     string id;
-    int rating = -1;
-    string comment = "NoComment";
+    int rating;
+    string comment;
 };
 
 
