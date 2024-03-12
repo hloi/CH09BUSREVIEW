@@ -20,7 +20,7 @@ public:
     void delReview(Review& r);
 
     friend ostream& operator<<(ostream& out, ReviewList& revList);
-
+    friend istream& operator>>(istream& in, ReviewList& revList);
 private:
     vector<Review> reviewList;
 
