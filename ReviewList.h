@@ -11,7 +11,7 @@
 
 class ReviewList {
 public:
-
+    ReviewList() {name = "";}
     ReviewList(string name);
     void readReview(string filename);
     double CalcAvgRating();
