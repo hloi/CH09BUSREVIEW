@@ -27,6 +27,7 @@ public:
     bool operator==(Review& r);
 
     friend ostream& operator<<(ostream& out, Review& r);
+    friend istream& operator>>(istream& in, Review& r);
 
 private:
     string id;
