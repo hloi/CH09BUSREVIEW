@@ -12,7 +12,7 @@
 class ReviewList {
 public:
 
-    ReviewList();
+    ReviewList(string name);
     void readReview(string filename);
     double CalcAvgRating();
     void saveReview(string filename);
@@ -23,7 +23,7 @@ public:
     friend istream& operator>>(istream& in, ReviewList& revList);
 private:
     vector<Review> reviewList;
-
+    string name;
 
 };
 
