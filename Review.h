@@ -24,7 +24,7 @@ public:
     int GetRating() const { return rating; }
     string GetComment() const { return comment; }
 
-    bool operator==(Review& r);
+    bool operator==(const Review& r) const;
 
     friend ostream& operator<<(ostream& out, Review& r);
     friend istream& operator>>(istream& in, Review& r);

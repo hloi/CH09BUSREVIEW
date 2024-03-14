@@ -5,7 +5,7 @@
 #include <stdexcept>
 
 #include "ReviewList.h"
-
+#include <algorithm>    // std::find
 using namespace std;
 
 ReviewList::ReviewList(string name) {
@@ -54,5 +54,21 @@ void ReviewList::saveReview(string filename) {
     out << name << endl;
     out << *this;
     out.close();
+
+}
+
+void ReviewList::delReview(Review &r) {
+    // using std::find with vector and iterator:
+
+    std::vector<Review>::iterator it;
+
+    it = find(reviewList.begin(), reviewList.end(), r);
+    if (it != reviewList.end()) {
+        reviewList.erase(it);
+    }
+    else {
+        throw "can't find reviewer.";
+    }
+
 
 }
